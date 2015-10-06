@@ -41,7 +41,108 @@
             <!-- Any section element inside of this container is displayed as a slide -->
             <div class="slides">
                 <section>
-                    <h1>My presentation</h1>
+                    <h2>Version numbers from Git</h2>
+                </section>
+
+                <section>
+                    <p>Remember SVN $Rev$ substitution?</p>
+                    <p>It was really useful for version numbers.</p>
+                    <div class="fragment">
+                    <p>Example:</p>
+                    <code>version = "1.0.<span class="redbox">$Rev$</span>"</code>
+                    </div>
+                    <div class="fragment">
+                    <p><img height="100" class="plain nobg" src="lib/img/arrow-down-0.png" /></p>
+                    <code>version = "1.0.<span class="redbox">$Rev: 374 $</span>"</code>
+                    </div>
+                    <div class="fragment">
+                    <p />
+                    <small>(Maybe not as useful as all that...)</small>
+                    </div>
+                </section>
+
+                <section>
+                    <p>String parsing to the rescue:</p>
+                    <code>"1.0.$Rev: 374 $"</code> &#x27f6; <code>"1.0.374"</code>
+                    <p class="fragment">Which looks good in an About dialog.</p>
+
+                    <aside class="notes">
+                        But with a bit of cleverness and string parsing, you
+                        could turn <code>"1.0.$Rev: 374 $"</code> into
+                        <code>"1.0.374"</code>, which was quite suitable for
+                        putting into your Help&rarr;About box.
+                    </aside>
+                </section>
+
+                <section>
+                    Then along came Git.
+                    <p class="fragment">Git doesn't have nice, numeric revision numbers.</p>
+                    <p class="fragment">It has ugly-looking commit hashes like 8fb4da5.</p>
+                </section>
+
+                <section>
+                    So, how can you get nice version numbers out of Git?
+                </section>
+
+                <section>
+                    Enter the &nbsp;<code>git describe</code>&nbsp; command.
+                    <p class="fragment"><code>$ git describe</code></p>
+                    <p class="fragment"><code>v1.0-42-g8fb4da5</code></p>
+                    <!-- <p class="fragment">Some subtleties I won't get into.</p> -->
+                </section>
+
+                <section>
+                    <!-- Continue writing from here. -->
+                    Breakdown of a &nbsp;<code>git describe</code>&nbsp; version number:
+                    <div style="display: inline-block">
+                        <div class="fragment" style="float: left; color: cyan">
+                            <p><code style="align: right">v1.0</code></p>
+                            <img height="200px" class="nobg plain" src="lib/img/arrow-up-0.png" />
+                            <p>Git tag</p>
+                        </div>
+                        <p style="float: left"><code >-</code></p>
+                        <div class="fragment" style="float: left; color: lightgreen">
+                            <p><code>42</code></p>
+                            <img height="200px" class="nobg plain" src="lib/img/arrow-up-0.png" />
+                            <p>Commits since tag</p>
+                        </div>
+                        <p style="float: left"><code>-</code></p>
+                        <div class="fragment" style="float: left; color: yellow">
+                            <p><code>g8fb4da5</code></p>
+                            <img height="200px" class="nobg plain" src="lib/img/arrow-up-0.png" />
+                            <p>Hash of HEAD commit</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section>
+                </section>
+
+                <section>
+                </section>
+
+                <section>
+                </section>
+
+                <section>
+                </section>
+
+                <section>
+                </section>
+
+                <section>
+                </section>
+
+                <section>
+                </section>
+
+                <section>
+                </section>
+
+                <section>
+                </section>
+
+                <section>
                 </section>
             </div>
 
