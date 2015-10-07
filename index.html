@@ -103,7 +103,7 @@
                         <div class="fragment" style="float: left; color: cyan">
                             <p><code>v1.0</code></p>
                             <img height="150px" class="nobg plain" src="lib/img/fat-arrow-up-0-cyan.png" />
-                            <p>Git tag</p>
+                            <p>Latest<br/>git tag</p>
                         </div>
                         <p style="float: left"><code >-</code></p>
                         <div class="fragment" style="float: left; color: lightgreen">
@@ -117,7 +117,20 @@
                             <img height="150px" class="nobg plain" src="lib/img/fat-arrow-up-0-yellow.png" />
                             <p>Hash of<br/>HEAD commit</p>
                         </div>
+                        <div style="clear: both"></div>
                     </div>
+                    <p class="fragment">Note: only <b>annotated</b> tags will be used</p>
+                </section>
+
+                <section>
+                    <!-- If people need a discussion of annotated tags, do so here -->
+                    Two kinds of git tags: <b>annotated</b> and <b>lightweight</b>
+                    <ul>
+                    <li class="fragment"><code>git tag</code> &#x27f6; <b>lightweight</b> tag (default)</li>
+                    <li class="fragment"><code>git tag -a</code> &#x27f6; <b>annotated</b> tag</li>
+                    <li class="fragment"><code>git tag -s</code> &#x27f6; <b>annotated</b> and <b>signed</b> tag</li>
+                    </ul>
+                    <p class="fragment">Use <b>lightweight</b> tags for private tags,<br/>and <b>signed</b> tags for releases</p>
                 </section>
 
                 <section>

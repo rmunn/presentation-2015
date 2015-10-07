@@ -71,6 +71,7 @@ body {
   max-height: 95%; }
 
 .reveal strong, .reveal b {
+  color: cyan;
   font-weight: bold; }
 
 .reveal em {
