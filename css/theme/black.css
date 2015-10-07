@@ -156,6 +156,10 @@ body {
   border-radius: 10px;
 }
 
+.reveal code.nobg {
+  background: inherit;
+}
+
 .reveal pre code {
   display: block;
   padding: 5px;

@@ -131,11 +131,13 @@
                     <li class="fragment"><code>git tag -a</code> &#x27f6; <b>annotated</b> tag</li>
                     <li class="fragment"><code>git tag -s</code> &#x27f6; <b>annotated</b> and <b>signed</b> tag</li>
                     </ul>
-                    <p class="fragment">Use <b>lightweight</b> tags for private tags,<br/>and <b>signed</b> tags for releases</p>
+                    <p class="fragment">Use <b>lightweight</b> tags for private tags,<br/>and <b>signed</b> tags for releases.</p>
+                    <p class="fragment">BTW, always use <code>git push --follow-tags</code>:<br/>It pushes only <b>annotated</b> tags.</p>
+                    <p class="fragment"><b>NEVER</b> use <code>git push --tags</code>:<br/><b>Lightweight</b> tags should not leave your repo.</p>
                 </section>
 
                 <section>
-                    So what?
+                    <h1>So what?</h1>
                 </section>
 
                 <section>
@@ -188,7 +190,9 @@
 
                 <section>
                     Bonus TeamCity integration
-                    <p class="fragment">If you're using TeamCity, the tool's output<br/>is in the right format for TeamCity to pick up</p>
+                    <p class="fragment">If you're using TeamCity, the tool's output<br/>is in the right format for TeamCity to pick up.</p>
+                    <p class="fragment">If you're not using TeamCity, you'll need to<br/>set up the environment variables youself.</p>
+                    <p class="fragment">E.g., output the tool's output to a shell script<br/>and do <code>source myscript.sh</code></p>
                 </section>
 
                 <section>
