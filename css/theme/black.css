@@ -70,6 +70,19 @@ body {
   max-width: 95%;
   max-height: 95%; }
 
+/* Simple classes for color and floating text */
+.reveal .cyan {
+  color: cyan
+}
+
+.reveal .yellow {
+  color: yellow
+}
+
+.reveal .lightgreen {
+  color: lightgreen
+}
+
 .reveal strong, .reveal b {
   color: cyan;
   font-weight: bold; }
