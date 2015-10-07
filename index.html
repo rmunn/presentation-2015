@@ -119,7 +119,8 @@
                         </div>
                         <div style="clear: both"></div>
                     </div>
-                    <p class="fragment">Note: only <b>annotated</b> tags will be used</p>
+                    <p class="fragment">This means we're <span style="color: lightgreen">42 commits ahead of version 1.0.</p>
+                    <p class="fragment">Note: only <b>annotated</b> tags will be used.</p>
                 </section>
 
                 <section>
@@ -142,15 +143,52 @@
                     <!-- Talk about "single source of truth" for your version numbers. -->
                     <!-- Your build process can automatically do version numbers for you. -->
                     <!-- No more "update version number" commits: just tag it. -->
+                    "Single source of truth" for your version numbers.
+                    <p class="fragment">Change the version number in <b>one</b> place,<br/>and it changes everywhere.</p>
+                    <p class="fragment">No more "update version number" commits.<br/><b>Just Tag It</b>&trade;.</p>
                 </section>
 
                 <section>
+                    Make your build process help you.
+                    <p class="fragment">Run <code>git describe</code> early in the build process,<br/>
+                    then use text replacement to put the version number where it needs to be.</p>
+                    <ul class="fragment">
+                        <li><code>AssemblyInfo.cs</code></li>
+                        <li><code>__setup__.py</code></li>
+                        <li><code>package.json</code></li>
+                        <li>... and so on ...</li>
+                    </ul>
                 </section>
 
                 <section>
+                    I wrote a simple tool to help with this.
+                    <p class="fragment">It runs <code>git describe</code> and parses the result.</p>
+                    <div class="fragment">It outputs four environment variables:<br/>
+                        <table>
+                            <tr>
+                                <td>GIT_VN_FULL</td>
+                                <td>v<span style="color: cyan">1.0</span>-<span style="color: lightgreen">42</span>-g<span style="color: yellow">8fb4da5</span></td>
+                            </tr>
+                            <tr>
+                                <td>GIT_VN_TAG</td>
+                                <td><span style="color: cyan">1.0</span> (no "v")</td>
+                            </tr>
+                            <tr>
+                                <td>GIT_VN_COMMITS</td>
+                                <td><span style="color: lightgreen">42</span></td>
+                            </tr>
+                            <tr>
+                                <td>GIT_VN_SHA</td>
+                                <td><span style="color: yellow">8fb4da5</span> (no "g")</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <p class="fragment">Then you use those in your later build process.</p>
                 </section>
 
                 <section>
+                    Bonus TeamCity integration
+                    <p class="fragment">If you're using TeamCity, the tool's output<br/>is in the right format for TeamCity to pick up</p>
                 </section>
 
                 <section>
