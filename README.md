@@ -1,4 +1,4 @@
-# Revision control with Git
+# Version numbers with Git
 
 A presentation for a local conference I attended. Made with [reveal.js](http://lab.hakim.se/reveal-js/).
 
